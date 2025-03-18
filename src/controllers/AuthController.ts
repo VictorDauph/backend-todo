@@ -76,7 +76,8 @@ export async function login(req: Request, res: Response) {
             secure: process.env.NODE_ENV === "production"
         });
 
-        res.status(200).json({ message: "Login réussi !" });
+        res.status(200).json({ message: "Login réussi !"
+        });
     } catch (err: any) {
         console.error("Erreur lors de l'authentification :", err);
         res.status(500).json({ message: err.message });

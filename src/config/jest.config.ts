@@ -1,4 +1,10 @@
 import type { Config } from '@jest/types';
+import dotenv from 'dotenv';
+
+
+
+
+dotenv.config({ path: process.env.ENV_FILE || '.env' });
 
 const config: Config.InitialOptions = {
     rootDir: '../../',
