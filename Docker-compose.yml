@@ -1,7 +1,7 @@
 services:
   api:
     build: .
-    container_name: projet_todo
+    container_name: projet_todo_back
     ports:
       - "3000:3000"
       - "9229:9229"
@@ -12,8 +12,6 @@ services:
     volumes:
       - ./src:/app/src
       - /app/node_modules # Empêche le partage des node_modules entre hôte et conteneur
-    environment:
-      - NODE_ENV=development
     command: npm run debug
 
   postgres:
