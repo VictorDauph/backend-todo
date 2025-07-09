@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.ts --legacy-watch",
-    "prod": "npx tsc && node dist/index.js",
     "build": "tsc",
     "debug": "npx nodemon --legacy-watch --ext ts src --exec 'node --inspect=0.0.0.0:9229 -r ts-node/register --nolazy' src/index.ts",
     "test": "npx jest --config src/config/jest.config.ts"

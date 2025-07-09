@@ -72,8 +72,8 @@ export async function login(req: Request, res: Response) {
         // Stocker le token dans un cookie sécurisé
         res.cookie("jwt", token, {
             httpOnly: true,
-            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-            secure: process.env.NODE_ENV === "production"
+            sameSite: "lax",
+            secure: false
         });
 
         res.status(200).json({ message: "Login réussi !" });
