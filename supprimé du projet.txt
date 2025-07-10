@@ -7,13 +7,15 @@ Workflow d'intégration continue (peut être pas besoin pour l'exemple)
 Docker-compose.yml
 Dockerfile
 
-config CORS dans index.ts
-
 script de prod dans package.json
 
 variables d'envrionnement
 NODE_ENV=development 
 API_URL=http://localhost:3000
 CLIENT_URL=http://localhost:4200
+
+penser à vérifier que les variables d'environnement sont bien utilisées (genre connection string DB)
+
+config CORS dans index.ts
 
 config cookies
